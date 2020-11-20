@@ -141,7 +141,7 @@ func (httpu *HTTPUClient) Do(
 		response, err := http.ReadResponse(bufio.NewReader(bytes.NewBuffer(responseBytes[:n])), req)
 		if err != nil {
 			if err != io.ErrUnexpectedEOF {
-				log.Printf("httpu: error while parsing response: %v", err)
+				//log.Printf("httpu: error while parsing response: %v", err)
 			}
 			continue
 		}
